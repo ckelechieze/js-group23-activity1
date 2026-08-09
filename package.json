@@ -1,0 +1,18 @@
+{
+  "name": "js-group-23-activity-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+   "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  }
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
