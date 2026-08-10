@@ -1,12 +1,12 @@
 // Welcome program that greets the user by name and tells them the year they were born based on their age input.
 
-//let userName = prompt("What is your name?");
-//let age = prompt("How old are you?");
+let userName = prompt("What is your name?");
+let age = prompt("How old are you?");
 
-//let birthYear = 2026 - age;
-//let favoriteHobby = prompt("What is your favorite hobby?");
+let birthYear = 2026 - age;
+let favoriteHobby = prompt("What is your favorite hobby?");
 
-//alert(`Hello, ${userName}! You were born in ${birthYear}, and your favorite hobby is ${favoriteHobby}.`);
+alert(`Hello, ${userName}! You were born in ${birthYear}, and your favorite hobby is ${favoriteHobby}.`);
 
 
 console.log("girl & " + "boy"); 
@@ -37,3 +37,15 @@ console.log("Result: " + (x - y));
 
 // Part 4 
 // Team work: Christian, Cornelius.
+
+//Build a "Receipt Generator" that asks the user for an item name, its price, and how many they're buying, then displays a formatted receipt line.
+
+const itemName = prompt("What do you want to buy?");
+const itemPrice = Number(prompt("Enter the price:"));
+const itemQuantity = Number(prompt("How many do you want to buy?"));
+
+const total = itemPrice * itemQuantity;
+
+console.log(`You bought ${itemName} x ${itemQuantity} = #${total}`);
+
+alert(`You bought ${itemName} x ${quantity} = ₦${total.toLocaleString()}`);
