@@ -55,3 +55,14 @@ alert(`You bought ${itemName} x ${itemQuantity} = ₦${discountedPrice.toLocaleS
 
 
 // Activity 3: The type detective Agency
+
+
+
+// Part 4
+// Collaborative Technical Challenge
+//Build a "Username Generator" that asks for a person's first name and favorite number, converts the number properly, and creates a username by combining the lowercase first name with the number.
+
+const firstName = prompt("What is your first name?");
+const favoriteNumber = Number(prompt("Enter your favorite number"));
+
+alert(`Your username is: ${firstName.toLocaleLowerCase().trim()}${favoriteNumber}`)
