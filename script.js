@@ -44,8 +44,14 @@ const itemName = prompt("What do you want to buy?");
 const itemPrice = Number(prompt("Enter the price:"));
 const itemQuantity = Number(prompt("How many do you want to buy?"));
 
+const discount = 10;
 const total = itemPrice * itemQuantity;
+discountedAmount = total * (discount / 100);
+const discountedPrice = Math.round(total - discountedAmount);
 
 console.log(`You bought ${itemName} x ${itemQuantity} = #${total}`);
 
-alert(`You bought ${itemName} x ${quantity} = ₦${total.toLocaleString()}`);
+alert(`You bought ${itemName} x ${itemQuantity} = ₦${discountedPrice.toLocaleString()} with ${discount}% discount`);
+
+
+// Activity 3: The type detective Agency
