@@ -1,5 +1,7 @@
-// Welcome program that greets the user by name and tells them the year they were born based on their age input.
 
+// ACTIVITY 1 - THE DIGITAL MEMORY BOX
+// ==========================================
+// Welcome program that greets the user by name and tells them the year they were born based on their age input.
 let userName = prompt("What is your name?");
 let age = prompt("How old are you?");
 
@@ -35,8 +37,10 @@ console.log("Result: " + (x - y));
 // Part 3
 // will be done by Christian
 
-// Part 4 
-// Team work: Christian, Cornelius.
+
+// ACTIVITY 2
+// BUILDING SENTENCES WITH CODES
+//===============================================
 
 //Build a "Receipt Generator" that asks the user for an item name, its price, and how many they're buying, then displays a formatted receipt line.
 
@@ -54,11 +58,8 @@ console.log(`You bought ${itemName} x ${itemQuantity} = #${total}`);
 alert(`You bought ${itemName} x ${itemQuantity} = ₦${discountedPrice.toLocaleString()} with ${discount}% discount`);
 
 
-// Activity 3: The type detective Agency
 
-
-
-// Part 4
+// ACTIVITY 3 - TYPE DETECTIVE AGENCY =================================
 // Collaborative Technical Challenge
 //Build a "Username Generator" that asks for a person's first name and favorite number, converts the number properly, and creates a username by combining the lowercase first name with the number.
 
@@ -76,18 +77,44 @@ if (firstName.length > 8) {
 alert(`Your username is: ${usersName.toLocaleLowerCase().trim()}${favoriteNumber}`)
 
 
+
+// ACTIVITY 4 - TEXT AND NUMBERS
 // ======================================
-// PART 4
 // GRADE ROUNDER AND REPORTER
 //Build a "Grade Rounder and Reporter" that asks for a student's exact numeric score, rounds it, and builds a message reporting the rounded score along with the student's name in all uppercase.
 
-const studentName = prompt("Enter the student's name");
-const studentScore = prompt("Enter the student's score");
+const studentName = prompt("Enter the student's name").trim();
+const studentScore = Number(prompt("Enter the student's score"));
 
 const roundedScore = Math.round(studentScore);
-const report = `student: ${studentName.toUpperCase()} Rounded Score: ${studentScore}`;
+const report = `student: ${studentName.toUpperCase()} Rounded Score: ${roundedScore}`;
 
 alert(report);
 console.log(report);
+
+
+// ACTIVITY 5 - DECISION MAKERS
+// ======================================
+//Build a "Movie Ticket Pricer" that asks for a person's age and whether it's a weekday or weekend, then decides the ticket price using conditional logic (e.g., discounts for children, seniors, or weekday showings).
+
+const personAge = Number(prompt("Please enter your age"));
+
+const today = new Date();
+const day = today.getDay();
+
+const isWeekend = day === 0 || day === 6;
+
+let ticketPrice = 5000;
+let discountedTicketPrice = ticketPrice - (ticketPrice * 10 / 100);
+
+if (personAge < 13) {
+    alert(`You are a child, therefore your ticket price is: ${discountedTicketPrice} with 10% discount`);
+} else if (personAge >= 65) {
+    alert(`You are a Senior Man, your ticket price is: ${discountedTicketPrice} with 10% discount`);
+} else if (isWeekend) {
+    alert(`It's weekend, your ticket price is ${discountedTicketPrice} with 10% discount`);
+} else {
+    alert(`You are an adult, no discount for you, your ticket price is: ${ticketPrice}`);
+}
 
 
