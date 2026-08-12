@@ -65,4 +65,29 @@ alert(`You bought ${itemName} x ${itemQuantity} = ₦${discountedPrice.toLocaleS
 const firstName = prompt("What is your first name?");
 const favoriteNumber = Number(prompt("Enter your favorite number"));
 
-alert(`Your username is: ${firstName.toLocaleLowerCase().trim()}${favoriteNumber}`)
+let usersName;
+
+if (firstName.length > 8) {
+    usersName = firstName.slice(0, 8);
+} else {
+    usersName = firstName;
+}
+
+alert(`Your username is: ${usersName.toLocaleLowerCase().trim()}${favoriteNumber}`)
+
+
+// ======================================
+// PART 4
+// GRADE ROUNDER AND REPORTER
+//Build a "Grade Rounder and Reporter" that asks for a student's exact numeric score, rounds it, and builds a message reporting the rounded score along with the student's name in all uppercase.
+
+const studentName = prompt("Enter the student's name");
+const studentScore = prompt("Enter the student's score");
+
+const roundedScore = Math.round(studentScore);
+const report = `student: ${studentName.toUpperCase()} Rounded Score: ${studentScore}`;
+
+alert(report);
+console.log(report);
+
+
