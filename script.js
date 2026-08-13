@@ -118,3 +118,108 @@ if (personAge < 13) {
 }
 
 
+// ACTIVITY 6 - SHORTCUTS AND CHOICES
+// ======================================
+
+// Part 1
+// We had a group discussion on the use of ternary operators as a shortcut to "if else" statements.
+
+// A ternary operator can replace an if / else if / else with three branches, but it won't be easy to read, the normal thing is for a ternary operator to handle two possible outcomes.
+
+condition ? valueIfTrue : valueIfFalse;
+
+// For three branches, the ternary operators can be nested as shown below: 
+const studentsScore = score >= 80
+    ? "A"
+    : score >= 65
+        ? "B"
+        : "C";
+
+// A ternar operator becomes hard to read and understand when there are multiple condtions, in this case, it is better to use the normal if/else statements.
+
+// Part 2
+// Snippet A
+let score = 72;
+let result = score >= 50 ? "Pass" : "Falil";
+console.log(result);
+
+// Snippet B
+let cartTotal = 0;
+let message = cartTotal > 0 ? "Proceed to checkout" : "Your cart is empty";
+console.log(message);
+
+// Snippet C
+let stock = 5;
+console.log(`Stock status: ${stock > 0 ? "Available" : "Out of stock"}`);
+
+// Debugging Challenge
+let temperature = 28;
+let feeling = temperature > 25 ? "hot" : "cold";
+console.log(feeling);
+
+let isMember = true;
+let discounts = isMember ? 10 : 0;
+console.log(`Discount: ${discounts}%`);
+
+
+// ACTIVITY 7 - REPEAT AFTER ME
+// ======================================
+
+// Part 1 - Group Discussion
+
+// 1. A loop is used when there is need for repetition of multiple task, instead of writing the same codes over and over again.
+
+// 2. Difference between a for loop and a while loop: The major difference is how the loops are controlled to stop executing. 
+// We use for loop when we know how many times an action will be repeated.
+for (let i = 1; i <= 5; i++)
+    console.log(i); //Here we want the loop to run 5times
+// for loop uses three things: 
+for (startingPoint; condition; update) {
+    // code to repeat
+}
+
+// We use while loop when we don't know how many times the loop will run
+let password = "";
+while (password !== 12345) {
+    password = prompt("Please enter a correct password:");
+}
+
+// 3. An infinite loop is a loop that keeps running without stopping because the loop condition always remains true.
+let i = 2;
+while (i <= 10) {
+    console.log(i);  //this is an infinite loop because i is always less than 10 since the i value has been set to be 2
+}
+// you can correct it by updating the value of i inside the loop by adding i++;
+
+// Part 2
+// Snippet A
+for (let i = 1; i <= 5; i++) {
+    console.log(i); // this will print numbers from 1 to 5
+}
+
+// Snippet B
+let count = 3;
+while (count > 0) {
+    console.log(`Countdown: ${count}`);
+    count--;
+}
+console.log("Liftoff!");
+
+// Snippet C
+for (let i = 0; i < 10; i = i + 2) {
+    console.log(i); // this will print numbers less than 10 starting from 0 and adding two each time
+}
+
+// Part 3 - Debugging Challenge
+let total = 0;
+for (let i = 1; i <= 5; i++) {
+    total = total + i;
+}
+
+console.log(`Total: ${total}`);
+
+let count = 5;
+while (count > 0) {
+    console.log(count);
+    count--
+}
