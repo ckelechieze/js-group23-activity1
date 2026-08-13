@@ -49,11 +49,11 @@ const itemPrice = Number(prompt("Enter the price:"));
 const itemQuantity = Number(prompt("How many do you want to buy?"));
 
 const discount = 10;
-const total = itemPrice * itemQuantity;
-discountedAmount = total * (discount / 100);
-const discountedPrice = Math.round(total - discountedAmount);
+const totals = itemPrice * itemQuantity;
+discountedAmount = totals * (discount / 100);
+const discountedPrice = Math.round(totals - discountedAmount);
 
-console.log(`You bought ${itemName} x ${itemQuantity} = #${total}`);
+console.log(`You bought ${itemName} x ${itemQuantity} = #${totals}`);
 
 alert(`You bought ${itemName} x ${itemQuantity} = ₦${discountedPrice.toLocaleString()} with ${discount}% discount`);
 
@@ -206,6 +206,7 @@ while (count > 0) {
 console.log("Liftoff!");
 
 // Snippet C
+{
 for (let i = 0; i < 10; i = i + 2) {
     console.log(i); // this will print numbers less than 10 starting from 0 and adding two each time
 }
@@ -223,3 +224,155 @@ while (count > 0) {
     console.log(count);
     count--
 }
+}
+
+// ACTIVITY 8 - REUSABLE MACHINES
+// ======================================
+// Part 1: We had a group discussion on functions, function declarations and parameters. We noted the difference between a parameter and an argument 
+
+// Part 2: 
+// Snippet A: 
+function greets(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greets("Ifeoma"); // prints "Hello Ifeoma!"
+greets("David");  // prints "Hello David!"
+
+// Snippet B
+function addNumbers(a, b) {
+    console.log(a + b);
+}
+
+addNumbers(4, 7); //prints 11
+addNumbers(10) // prints NaN because second argument is not provided
+
+// Snippet C:
+function sayHi() {
+    console.log("Hi There!");
+}
+
+console.log("Before calling function");
+sayHi( ) ;
+console.log("After calling function");
+
+// Debugging Challenge:
+function calculateArea(length, width) {
+    console.log(length * width)
+}
+
+function displayMessage(msg) {
+    console.log(msg);
+}
+
+displayMessage("Area calculator ready");
+calculateArea(5, 10); // started calculate with lowercase
+
+// Part 4: Build a "Tip Calculator Toolkit" made of two functions: one that calculates a tip based on a bill amount and tip percentage, and another that displays a formatted final message.
+
+function calculateTip(bill, percentage) {
+    const tip = bill * (percentage / 100);
+    return tip;
+}
+
+function formattedMessage(tip) {
+    console.log(`Your bill is: ₦${tip}`);
+}
+
+function splitBill(totalBill, numOfPeople) {
+    const billPerPerson = totalBill / numOfPeople;
+    return billPerPerson;
+}
+
+const tipAmount = calculateTip(1500, 10);
+calculateTip(1500, 10);
+formattedMessage(tipAmount);
+splitBill(2000, 10);
+
+
+// ACTIVITY 9 - FUNCTION EXPRESSIONS AND ARROW FUNCTIONS
+// ======================================
+
+// Part 1 - Group Discussion:  We had a group discussion on anonymous functions and arrow functions, we got to know that anonymous functions are functions that has no name. Anonymous functions can be run by storing it in a variable.
+
+function greeter() {
+    console.log("Hello!");
+} //this function has no name, we therefore store in in a variable called greet as shown below: 
+
+const greeter = function() {
+    console.log("Hello!");
+}
+
+greeter();
+
+// anonymous function can also be created and run immediatly. This is called IIFE (Immediatly Invoked Function Expression)
+(function() {
+    console.log("Hello!");
+})();
+
+// Arrow functions as the name implies uses an arrow to show what the function does
+const greeting = () => {
+    console.log("Hello!");
+}
+
+// Part 2: 
+// Snippet A:
+const multiply = function(a, b) {
+    return a * b;
+};
+
+console.log(multiply(3, 4)); //this will print 12
+
+// Snippet B 
+const double = num => num * 3;
+console.log(double(6)); // prints 12
+console.log(double(0)); // prints 0
+
+// Snippet C:
+const introduce = (name, age) => {
+    console.log(`My name is ${name} and I am ${age} years old.`);
+}
+
+introduce("Zainab", 22); 
+//prints "My name is Zainab and I am 22 years old"
+
+// Part 3 - Debugging Challenge:
+// 1
+const greetUser = (name) => {
+    console.log("Welcome, " + name)
+}
+
+greetUser("Emeka"); //greetUser should have same spelling as what was declared
+
+// 2
+const subtract = (a, b) => a - b
+console.log(subtract(10, 4));
+
+// Part 4 - Collaborative Technical Challenge:
+// Build a small "Math Helper Toolkit" using arrow functions for common calculations a student might need: converting a percentage to a decimal, calculating a rectangle's area, and converting Celsius to Fahrenheit.
+
+// Function for converting percentage to decimal
+const percentageToDecimal = (digit) => {
+    return digit / 100;
+}
+
+// Function to calculate area of a rectangle
+const rectangleArea = (length, breadth) => {
+    const area = length * breadth;
+    return area;
+}
+
+// Function to convert Celsius to Fahrenheit
+const celToFahren = (temp) => {
+    return (temp * 9 / 5) + 32;
+}
+
+// Function that converts Fahrenheit back to Celsius
+const fahrenToCelcius = (temp) => {
+    return (temp - 32) * 5 / 9;
+}
+
+console.log(percentageToDecimal(25)); // prints 0.25
+console.log(rectangleArea(10, 5));    // prints 50
+console.log(celToFahren(25));         // prints 77
+console.log(fahrenToCelcius(77)); // prints 25
