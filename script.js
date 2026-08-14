@@ -376,3 +376,76 @@ console.log(percentageToDecimal(25)); // prints 0.25
 console.log(rectangleArea(10, 5));    // prints 50
 console.log(celToFahren(25));         // prints 77
 console.log(fahrenToCelcius(77)); // prints 25
+
+
+// ACTIVITY 10 - BUILD-A-PROGRAM CHALLENGE
+// ======================================
+
+// Part 1: Group Discussion
+// We had a group on the concept that connects most other concepts, we made mention of the concept of variables as a major concept that connects others.
+
+// Part 2: Predicting Outputs
+// Snippet A:
+const getDiscount = (total) => total >= 100 ? total * 0.1 : 0;
+
+let orderTotal = 120;
+let discount = getDiscount(orderTotal);
+console.log(`Discount: $${discount}`); // prints "Discount: $12"
+console.log(`Final total: $${orderTotal - discount}`); // Prints "Final total: $108"
+
+// Snippet B: 
+function classifyNumbers(limit) {
+    for (let i = 1; i <= limit; i++) {
+        console.log(i % 2 === 0 ? `${i} is even` : `${i} is odd`);
+    }
+}
+
+classifyNumbers(4); // This will print "4 is even"
+
+// Snippet C: 
+const formatName = (name) => name.trim().toUpperCase();
+
+let rawInput = "  kelechi  ";
+console.log(`Welcome, ${formatName(rawInput)}!`);
+// Prints "Welcome KELECHI!"
+
+// Part 4 - Collaborative Technical Challenge: 
+// Build a complete "Order Checkout Program" that combines everything from this course:
+
+// Get order details
+const itemName = prompt("Enter item name:");
+const itemPrice = Number(prompt("Enter item price:"));
+const itemQuantity = Number(prompt("Enter the quantity:"));
+
+// Function to calculate the subtotal
+function calculateSubTotal(price, quantity) {
+    return price * quantity;
+};
+
+// calculate subtotal
+const subTotal = calculateSubTotal(itemPrice, itemQuantity);
+
+// to determine free shipping
+const freeShippingAmount = 2000;
+const shippingFee = subTotal >= shippingAmount ? 0 : 500;
+
+// calculate final total
+const total = subTotal + shippingFee;
+
+// receipt display
+const receipt = `
+=========== ORDER RECEIPT ===========
+
+Item: ${itemName}
+Price: ${itemPrice.toLocaleString()}
+Quantity: ${itemQuantity}
+
+subTotal: ${subTotal.toLocaleString()}
+Shipping: ${shippingFee === 0 ? "FREE" : `#${shippingFee.toLocaleString()}`}
+
+-----------------------------------------
+TOTAL:  #${total.toLocaleString()}
+`;
+
+alert(receipt);
+console.log(receipt);
