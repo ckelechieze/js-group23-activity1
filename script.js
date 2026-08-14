@@ -1,19 +1,10 @@
 
 // ACTIVITY 1 - THE DIGITAL MEMORY BOX
 // ==========================================
-// Welcome program that greets the user by name and tells them the year they were born based on their age input.
-let userName = prompt("What is your name?");
-let age = prompt("How old are you?");
 
-let birthYear = 2026 - age;
-let favoriteHobby = prompt("What is your favorite hobby?");
+// Part 1 - Group Discussion: 
+// We discussed the importance of a variable and how they help us store data. We also discussed the difference between console.log(), alert() and prompt(). We also discussed the use of "let" and "const" in variable declaration. Part of our discussion was on the different data types, including numbers, strings, numbers and booleans.
 
-alert(`Hello, ${userName}! You were born in ${birthYear}, and your favorite hobby is ${favoriteHobby}.`);
-
-
-console.log("girl & " + "boy"); 
-
-console.log("1 " + "2 " + "3 ");
 
 // Part 2: Predict the output
 // Snippet A
@@ -37,11 +28,53 @@ console.log("Result: " + (x - y));
 // Part 3
 // will be done by Christian
 
+// Part 4 - Collaborative Technical Challenge: 
+// Your group needs to build a simple "Welcome Program" that greets a new user by name and tells them what year they were born, based on their age.
+let userName = prompt("What is your name?");
+let age = prompt("How old are you?");
+
+let birthYear = 2026 - age;
+let favoriteHobby = prompt("What is your favorite hobby?");
+
+alert(`Hello, ${userName}! You were born in ${birthYear}, and your favorite hobby is ${favoriteHobby}.`);
+
+
+console.log("girl & " + "boy"); 
+
+console.log("1 " + "2 " + "3 ");
+
 
 // ACTIVITY 2
 // BUILDING SENTENCES WITH CODES
 //===============================================
 
+// Part 1 - Group Discussion
+
+// Part 2 - Predict the output
+// Snippet A:
+let a = 10;
+let b = "5";
+
+console.log(a + b); // This will print 105 (JS converts 10 to a string and joins them)
+console.log(a - b); // This will print 5 (JS converts 5 to a number and does the subtraction)
+
+// Snippet B:
+
+// Snippet c:
+
+// Part 3 - Debugging Challenge:
+// 1
+let firstName = "Tunde";
+let lastName = "Okafor";
+let fullName = firstName + " " + lastName;
+console.log("Welcome, " + fullName + "!");
+
+// 2
+let itemPrice = "15";
+let total = itemPrice + "5";
+console.log(`Your total is: $${total}`);
+
+// Part 4 - Collaborative Technical Challenge
 //Build a "Receipt Generator" that asks the user for an item name, its price, and how many they're buying, then displays a formatted receipt line.
 
 const itemName = prompt("What do you want to buy?");
@@ -135,26 +168,26 @@ const studentsScore = score >= 80
         ? "B"
         : "C";
 
-// A ternar operator becomes hard to read and understand when there are multiple condtions, in this case, it is better to use the normal if/else statements.
+// A ternary operator becomes hard to read and understand when there are multiple condtions, in this case, it is better to use the normal if/else statements.
 
 // Part 2
 // Snippet A
 let score = 72;
 let result = score >= 50 ? "Pass" : "Falil";
-console.log(result);
+console.log(result); // prints "Pass" because score is greater than or equal to 50.
 
 // Snippet B
 let cartTotal = 0;
 let message = cartTotal > 0 ? "Proceed to checkout" : "Your cart is empty";
-console.log(message);
+console.log(message); // prints "Your cart is empty"
 
 // Snippet C
 let stock = 5;
-console.log(`Stock status: ${stock > 0 ? "Available" : "Out of stock"}`);
+console.log(`Stock status: ${stock > 0 ? "Available" : "Out of stock"}`); // prints "Available"
 
 // Debugging Challenge
 let temperature = 28;
-let feeling = temperature > 25 ? "hot" : "cold";
+let feeling = temperature > 25 ? "hot" : "cold"; //added ":"
 console.log(feeling);
 
 let isMember = true;
@@ -165,7 +198,7 @@ console.log(`Discount: ${discounts}%`);
 // ACTIVITY 7 - REPEAT AFTER ME
 // ======================================
 
-// Part 1 - Group Discussion
+// Part 1 - Group Discussion:
 
 // 1. A loop is used when there is need for repetition of multiple task, instead of writing the same codes over and over again.
 
@@ -201,9 +234,14 @@ for (let i = 1; i <= 5; i++) {
 let count = 3;
 while (count > 0) {
     console.log(`Countdown: ${count}`);
-    count--;
+    count--; 
 }
 console.log("Liftoff!");
+// this will print
+// Countdown: 3
+// Countdown: 2
+// Countdown: 1
+// Liftoff!
 
 // Snippet C
 {
@@ -256,6 +294,7 @@ console.log("Before calling function");
 sayHi( ) ;
 console.log("After calling function");
 
+// Part 3:
 // Debugging Challenge:
 function calculateArea(length, width) {
     console.log(length * width)
