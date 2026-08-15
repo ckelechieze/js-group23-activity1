@@ -1,3 +1,11 @@
+//===============================================
+// GROUP 23 JAVASCRIPT ACTIVITY
+// ==============================================
+
+// CONTRIBUTORS: CORNELIUS KELECHI EZE / UDENGWU CHRISTIAN ARINZECHUKWU
+
+
+
 // ACTIVITY 1 - THE DIGITAL MEMORY BOX
 // ==========================================
 
