@@ -7,11 +7,11 @@
 // Part 2: Predict the Output
 
 // Snippet A
-// let age = 25;
-// console.log(age);  
+ let age = 25;
+ console.log(age);  
 
-// age = "twenty-five";
-// console.log(age); 
+ age = "twenty-five";
+ console.log(age); 
 // it will print 25 and then twenty-five because the variable age was first assigned a number value and then reassigned a string value.
 
 // Snippet B
@@ -58,6 +58,7 @@ alert(`Hello, ${newUserName}! You were born in ${birthYear}, and your favorite h
 //===============================================
 
 // Part 1 - Group Discussion
+// We discussed the difference between + operator used for math and the + used for joining strings?
 
 // Part 2 - Predict the output
 // Snippet A:
@@ -129,23 +130,24 @@ alert(`You bought ${itemName1} x ${itemQuantity} = ₦${discountedPrice.toLocale
 
 // Activity 3: The Type Detective Agency
 // Part 1: Group discussion
+// We had group discussion on Number, parseInt and parseFloat
 
 // part 2: Predict the output
 // Snippet A
 let input = "42";
 let converted = Number(input);
-console.log(input1 + 8);
-console.log(converted + 8);
+console.log(input + 8); // prints 428
+console.log(converted + 8); // prints 50
 
 // Snippet B
 let name = "  Chidinma  ";
-console.log(name.trim());
-console.log(name.length);
+console.log(name.trim());  // prints Chidimma
+console.log(name.length);  // prints 8
 
 // Snippet C
 let word = "JavaScript";
-console.log(word.toUpperCase());
-console.log(word);
+console.log(word.toUpperCase());  // prints JAVASCRIPT
+console.log(word);  // prints JavaScript
 
 // Part 3: Debugging Challenge
 // wrong code given
@@ -187,19 +189,19 @@ alert(`Your username is: ${yourFirstName.toLocaleLowerCase().trim()}${yourFavori
 
 // Part 2: Predict the output
 // Snippet A
-console.log(Math.random(4.5));
-console.log(Math.floor(4.9));
-console.log(Math.ceil(4.1));
+console.log(Math.random(4.5)); // 0.7362819
+console.log(Math.floor(4.9));  // 4
+console.log(Math.ceil(4.1));   // 4.1
 
 // Snippet B
 let phrase = "I love JavaScript";
-console.log(phrase.includes("love"));
-console.log(phrase.split(" "));
+console.log(phrase.includes("love"));  //true
+console.log(phrase.split(" "));        // ["I", "love", "JavaScript"]
 
 // Snippet C
 let num = 7;
-console.log(Math.max(num, 10, 3));
-console.log(Math.min(num, 10, 3));
+console.log(Math.max(num, 10, 3));  // 10
+console.log(Math.min(num, 10, 3));  // 3
 
 // part 3: Debugging Challenge
 // wrong code given
@@ -250,6 +252,7 @@ if (temperature > 30) {
 } else {
     console.log("It's cool.");
 }
+// It's cool.
 
 // Snippet B
 let age = 20;
@@ -259,6 +262,7 @@ if (age >= 18 && hasID) {
 } else {
     console.log("Entry denied.");
 }
+// Entry denied.
 
 // Snippet C
 let password = "1234";
@@ -267,6 +271,7 @@ if (password === "0000") {
 } else {
     console.log("No change.");
 }
+// No Change
 
 // Part 3: Debugging Challenge
 // wrong code given:
@@ -334,9 +339,9 @@ const studentsScore = score >= 80
 
 // Part 2
 // Snippet A
-// let score = 72;
-// let result = score >= 50 ? "Pass" : "Falil";
-// console.log(result); // prints "Pass" because score is greater than or equal to 50.
+ let score = 72;
+ let result = score >= 50 ? "Pass" : "Falil";
+ console.log(result); // prints "Pass" because score is greater than or equal to 50.
 
 // Snippet B
 let cartTotal = 0;
@@ -659,4 +664,6 @@ TOTAL:  #${total.toLocaleString()}
 alert(receipt);
 console.log(receipt);
 }
+
+
 
